@@ -1,0 +1,5 @@
+### 사업자 등록
+POST http://localhost:8080/api/sellers
+Content-Type: application/json
+
+< ../json/dummy_seller.json
