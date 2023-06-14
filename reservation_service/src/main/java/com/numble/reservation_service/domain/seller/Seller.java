@@ -4,19 +4,20 @@ import java.util.regex.Pattern;
 
 import org.springframework.util.Assert;
 
+import com.numble.reservation_service.domain.model.DefaultUserInfo;
 import com.numble.reservation_service.domain.model.Email;
 import com.numble.reservation_service.domain.model.Password;
 import com.numble.reservation_service.domain.model.Phone;
-import com.numble.reservation_service.domain.model.User;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Seller extends User {
+public class Seller {
 
 	private static final Pattern LICENSE_ID_PATTERN = Pattern.compile(
 		"^(\\d{3})+-+(\\d{2})+-+(\\d{5})$");
@@ -32,6 +33,9 @@ public class Seller extends User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Embedded
+	private DefaultUserInfo userInfo;
+
 	@Column(name = "license_id", unique = true, nullable = false, length = 12)
 	private String LicenseId;
 
@@ -42,7 +46,8 @@ public class Seller extends User {
 	}
 
 	public Seller(Email email, Password password, Phone phone, String licenseId, String name) {
-		super(email, password, phone);
+		this.userInfo = new DefaultUserInfo(email, password, phone);
+
 		validate(licenseId, name);
 		this.LicenseId = licenseId;
 		this.name = name;

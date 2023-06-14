@@ -4,12 +4,13 @@ import java.util.Objects;
 
 import org.springframework.util.Assert;
 
+import com.numble.reservation_service.domain.model.DefaultUserInfo;
 import com.numble.reservation_service.domain.model.Email;
 import com.numble.reservation_service.domain.model.Password;
 import com.numble.reservation_service.domain.model.Phone;
-import com.numble.reservation_service.domain.model.User;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -18,7 +19,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Customer extends User {
+public class Customer {
 
 	public static final int NICKNAME_LENGTH = 30;
 	public static final String NICKNAME_NULL_MESSAGE = "nickname can not be null.";
@@ -29,6 +30,8 @@ public class Customer extends User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Embedded
+	private DefaultUserInfo userInfo;
 
 	@Column(unique = true, nullable = false, length = NICKNAME_LENGTH)
 	private String nickname;
@@ -39,11 +42,12 @@ public class Customer extends User {
 	private int age;
 
 	protected Customer() {
-		super();
+
 	}
 
 	public Customer(Email email, Password password, Phone phone, String nickname, GENDER gender, int age) {
-		super(email, password, phone);
+		this.userInfo = new DefaultUserInfo(email, password, phone);
+
 		validate(nickname, age);
 		this.nickname = nickname;
 		this.gender = Objects.requireNonNull(gender);
