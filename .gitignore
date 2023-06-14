@@ -221,3 +221,4 @@ gradle-app.setting
 /reservation_service/gradle/
 /.idea/
 /reservation_service/HELP.md
+/reservation_service/BOOT-INF/
