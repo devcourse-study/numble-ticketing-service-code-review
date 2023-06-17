@@ -37,7 +37,7 @@ public class Seller {
 	private DefaultUserInfo userInfo;
 
 	@Column(name = "license_id", unique = true, nullable = false, length = 12)
-	private String LicenseId;
+	private String licenseId;
 
 	@Column(length = 10)
 	private String name;
@@ -49,7 +49,7 @@ public class Seller {
 		this.userInfo = new DefaultUserInfo(email, password, phone);
 
 		validate(licenseId, name);
-		this.LicenseId = licenseId;
+		this.licenseId = licenseId;
 		this.name = name;
 	}
 
