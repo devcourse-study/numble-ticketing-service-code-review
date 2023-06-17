@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.numble.reservation_service.domain.seller.Seller;
 import com.numble.reservation_service.domain.seller.SellerRepository;
-import com.numble.reservation_service.domain.show.model.entity.Show;
+import com.numble.reservation_service.domain.show.model.Show;
 
 import jakarta.persistence.EntityNotFoundException;
 

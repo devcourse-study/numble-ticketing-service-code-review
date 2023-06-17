@@ -1,9 +1,9 @@
 package com.numble.reservation_service.domain.show;
 
-import com.numble.reservation_service.domain.show.model.entity.Show;
-import com.numble.reservation_service.domain.show.model.vo.Capacity;
-import com.numble.reservation_service.domain.show.model.vo.Location;
-import com.numble.reservation_service.domain.show.model.vo.Price;
+import com.numble.reservation_service.domain.show.model.Capacity;
+import com.numble.reservation_service.domain.show.model.Location;
+import com.numble.reservation_service.domain.show.model.Price;
+import com.numble.reservation_service.domain.show.model.Show;
 
 import jakarta.validation.constraints.NotBlank;
 

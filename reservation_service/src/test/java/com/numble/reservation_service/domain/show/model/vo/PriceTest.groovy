@@ -1,5 +1,6 @@
 package com.numble.reservation_service.domain.show.model.vo
 
+import com.numble.reservation_service.domain.show.model.Price
 import spock.lang.Specification
 
 class PriceTest extends Specification {

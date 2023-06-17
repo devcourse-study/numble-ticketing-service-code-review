@@ -1,10 +1,13 @@
-package com.numble.reservation_service.domain.show
+package com.numble.reservation_service.domain.schedule
 
 import com.numble.reservation_service.domain.model.Email
 import com.numble.reservation_service.domain.model.Password
 import com.numble.reservation_service.domain.model.Phone
 import com.numble.reservation_service.domain.seller.Seller
 import com.numble.reservation_service.domain.seller.SellerRepository
+import com.numble.reservation_service.domain.show.ShowEnrollRequest
+import com.numble.reservation_service.domain.show.ShowRepository
+import com.numble.reservation_service.domain.show.ShowService
 import jakarta.persistence.EntityNotFoundException
 import org.springframework.test.util.ReflectionTestUtils
 import spock.lang.Specification

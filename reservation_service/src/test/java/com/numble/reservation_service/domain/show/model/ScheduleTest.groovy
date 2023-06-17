@@ -1,6 +1,6 @@
-package com.numble.reservation_service.domain.show.model.entity
+package com.numble.reservation_service.domain.show.model
 
-
+import com.numble.reservation_service.domain.schedule.Schedule
 import spock.lang.Specification
 
 import java.time.LocalDateTime

@@ -1,13 +1,10 @@
-package com.numble.reservation_service.domain.show.model.entity;
+package com.numble.reservation_service.domain.show.model;
 
 import java.util.Objects;
 
 import org.springframework.util.Assert;
 
 import com.numble.reservation_service.domain.seller.Seller;
-import com.numble.reservation_service.domain.show.model.vo.Capacity;
-import com.numble.reservation_service.domain.show.model.vo.Location;
-import com.numble.reservation_service.domain.show.model.vo.Price;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;

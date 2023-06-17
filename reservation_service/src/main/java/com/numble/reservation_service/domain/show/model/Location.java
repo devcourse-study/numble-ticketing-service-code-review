@@ -1,4 +1,4 @@
-package com.numble.reservation_service.domain.show.model.vo;
+package com.numble.reservation_service.domain.show.model;
 
 import java.util.regex.Pattern;
 

@@ -1,8 +1,10 @@
-package com.numble.reservation_service.domain.show.model.entity;
+package com.numble.reservation_service.domain.schedule;
 
 import java.time.LocalDateTime;
 
 import org.springframework.util.Assert;
+
+import com.numble.reservation_service.domain.show.model.Show;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
