@@ -1,0 +1,5 @@
+### 공연 등록
+POST http://localhost:8080/api/shows/1
+Content-Type: application/json
+
+< ../json/dummy_show.json
