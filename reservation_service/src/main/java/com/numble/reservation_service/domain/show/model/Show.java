@@ -69,4 +69,8 @@ public class Show {
 	public void registerSeller(Seller seller) {
 		this.seller = Objects.requireNonNull(seller);
 	}
+
+	public boolean verifySellerId(long sellerId) {
+		return this.seller.id() == sellerId;
+	}
 }

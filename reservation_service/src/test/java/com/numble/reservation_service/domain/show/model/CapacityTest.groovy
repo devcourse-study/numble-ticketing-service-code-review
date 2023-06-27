@@ -1,6 +1,6 @@
-package com.numble.reservation_service.domain.show.model.vo
+package com.numble.reservation_service.domain.show.model
 
-import com.numble.reservation_service.domain.show.model.Capacity
+
 import spock.lang.Specification
 
 class CapacityTest extends Specification {

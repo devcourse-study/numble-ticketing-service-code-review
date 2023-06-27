@@ -1,6 +1,7 @@
 package com.numble.reservation_service.domain.schedule;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 import org.springframework.util.Assert;
 
@@ -36,6 +37,10 @@ public class Schedule {
 	protected Schedule() {
 	}
 
+	public void registerShow(Show show) {
+		this.show = Objects.requireNonNull(show);
+	}
+
 	public Schedule(LocalDateTime start, LocalDateTime end) {
 		validate(start, end);
 		this.start = start;
@@ -50,5 +55,9 @@ public class Schedule {
 
 	public Show show() {
 		return show;
+	}
+
+	public Long id() {
+		return id;
 	}
 }
