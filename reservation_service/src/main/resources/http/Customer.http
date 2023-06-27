@@ -1,0 +1,5 @@
+### 사용자 등록
+POST http://localhost:8080/api/customers
+Content-Type: application/json
+
+< ../json/dummy_customer.json

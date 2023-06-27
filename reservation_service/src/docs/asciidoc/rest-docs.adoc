@@ -1,0 +1,43 @@
+ifndef::snippets[]
+:snippets: build/generated-snippets
+endif::[]
+
+= 예매 서비스 API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+
+== Seller
+
+=== Seller 생성
+
+==== Request
+
+include::{snippets}/seller-enroll/http-request.adoc[]
+
+include::{snippets}/seller-enroll/request-fields.adoc[]
+
+==== Response
+
+include::{snippets}/seller-enroll/http-response.adoc[]
+
+include::{snippets}/seller-enroll/response-fields.adoc[]
+
+== Customer
+
+=== Customer 생성
+
+==== Request
+
+include::{snippets}/customer-enroll/http-request.adoc[]
+
+include::{snippets}/customer-enroll/request-fields.adoc[]
+
+==== Response
+
+include::{snippets}/customer-enroll/http-response.adoc[]
+
+include::{snippets}/customer-enroll/response-fields.adoc[]
